@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de Exames</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome do Paciente</th>
+            <th>Nome do Exame</th>
+            <th>Resultado do Exame</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let exame of exames | async">
+            <td>{{exame.nomePaciente}}</td>
+            <td>{{exame.nomeExame}}</td>
+            <td>{{exame.resultadoExame}}</td>
+            <td>
+              <button (click)="deleteExame(exame.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateExames(exame.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            <button (click)="exameDetalhes(exame.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+          </td>
+   
+
+          </tr>
+        </tbody>
+         </table>
+    </div>
+  </div>

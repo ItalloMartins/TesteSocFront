@@ -1,0 +1,26 @@
+<h3>Cadastrar um Exame</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nome do Paciente</label>
+      <input type="text" class="form-control" id="nomePaciente" required [(ngModel)]="exames.nomePaciente" name="nomePaciente">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Nome do Exame</label>
+      <input type="text" class="form-control" id="nomeExame" required [(ngModel)]="exames.nomeExame" name="nomeExame">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Resultado/Observações do Exame</label>
+      <input type="text" class="form-control" id="resultadoExame" required [(ngModel)]="exames.resultadoExame" name="resultadoExame">
+    </div>
+
+    <button type="submit" class="btn btn-success">Cadastrar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Apenas um paciente pode fazer esse exame</h4>
+  <button class="btn btn-success" (click)="newExames()">Voltar</button>
+</div>

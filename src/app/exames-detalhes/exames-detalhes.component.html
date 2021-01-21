@@ -1,0 +1,22 @@
+<h2>Detalhes do Exame</h2> 
+
+<hr/>
+<div *ngIf="exames">
+  <div>
+    <label><b>Nome do Paciente: </b></label> {{exames.nomePaciente}}
+  </div>
+  <div>
+    <label><b>Nome do Exame: </b></label> {{exames.nomeExame}}
+  </div>
+  <div>
+    <label><b>Resultado/Observações: </b></label> {{exames.resultadoExame}}
+  </div>  
+  <div>
+    <label><b>Data de Cadastro: </b></label> 
+    {{exames.dataExame}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Voltar à lista</button><br>

@@ -1,0 +1,21 @@
+<h3>Update de Exame</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nome do Paciente</label>
+      <input type="text" class="form-control" id="nomePaciente" required [(ngModel)]="exames.nomePaciente" name="nomePaciente">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Nome do Exame</label>
+      <input type="text" class="form-control" id="nomeExame" required [(ngModel)]="exames.nomeExame" name="nomeExame">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Resultado do Exame</label>
+      <input type="text" class="form-control" id="resultadoExame" required [(ngModel)]="exames.resultadoExame" name="rescultadoExame">
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+  </form>
+</div>
